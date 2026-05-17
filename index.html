@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mais Doçado Bolos – Confeitaria Artesanal</title>
+  <title>Mais Doçado Bolos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -927,7 +927,7 @@
         padding-top: 72px;
         min-height: auto;
       }
-      .hero-image-col { order: -1; padding: 5% 5% 0; }
+      .hero-image-col { order: 1; padding: 0 5% 8%; }
       .hero-image-frame { width: min(320px, 88vw); }
       .hero-text { padding: 5% 5% 8%; text-align: center; }
       .hero-desc { margin-left: auto; margin-right: auto; }
@@ -1292,6 +1292,7 @@
             src="img/chocolate.png"
             alt="Bolo de Chocolate com Ganache"
             class="product-img"
+            style="object-position: center 40%;"
             data-product-name="Bolo de Chocolate com Ganache"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           />
@@ -1771,7 +1772,7 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu  = document.getElementById('closeMenu');
 
-    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
     closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.remove('open'));
